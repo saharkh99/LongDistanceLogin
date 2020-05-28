@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="right">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/whiteBlue"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:fontFamily="@fonts/farroya.ttf"
+        android:text="@string/name_app"
+        android:background="@color/firstbox"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="17dp"
+        android:text="@string/hint_login"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:fontFamily="@fonts/farroya.ttf"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string_username"
+        android:padding="3dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16dp"
+
+        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/user"/>
+        />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textSize="16dp"
+        android:layout_marginLeft="18dp"
+        android:singleLine="true"
+        android:background="@drawable/edittexts"
+        android:layout_marginRight="18dp"
+        android:ems="10"
+        android:maxLength="11"
+        android:padding="10dp"
+        android:paddingRight="10dp"
+        android:fontFamily="@fonts/farroya.ttf"
+        android:hint="@string/string_complete_username"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_password"
+            android:layout_margin="2dp"
+            android:padding="3dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16dp"
+
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/lcok"/>
+        />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_marginRight="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:ems="10"
+        android:singleLine="true"
+        android:background="@drawable/edittexts"
+        android:padding="10dp"
+        android:hint="@string/string_complete_password"
+        android:fontFamily="@fonts/farroya.ttf"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:layout_margin="18dp"
+        android:textColor="@color/whiteBlue"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:background="@drawable/button"
+        android:text="@string/string_confirm"
+        android:layout_gravity="center"
+        android:fontFamily="@fonts/farroya.ttf"
+        />
+
+    <TextView
+        android:id="@+id/tv_help"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:clickable="true"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@fonts/farroya.ttf"
+        android:text="@string/string_help" />
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/progress"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/tvLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+
+        android:gravity="center_horizontal"
+        android:text="@string/string_load"
+        android:layout_gravity="center"
+        android:fontFamily="@fonts/farroya.ttf"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

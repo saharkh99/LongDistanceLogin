@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/background_dialog"
+    android:layout_height="wrap_content">
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:src="@drawable/warnning"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="اطلاعات را به درستی وارد کنید"
+        android:textSize="18dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:padding="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="تایید"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:layout_gravity="right"
+        android:textColor="@color/black"
+        android:layout_margin="15dp"
+        android:clickable="true"
+        android:id="@+id/btn_ok"
+        android:background="#DFF2F5"
+       />
+
+</LinearLayout>
