@@ -32,6 +32,8 @@ import android.widget.Toast;
 import com.example.loginapp.MainActivity;
 import com.example.loginapp.R;
 import com.example.loginapp.Verification.SMSVerification;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.io.IOException;
 import java.util.List;
@@ -39,13 +41,13 @@ import java.util.Locale;
 
 public class LocationFinder extends AppCompatActivity {
 
-    Button send, cancel;
+    MaterialButton send, cancel;
     LocationManager locationManager;
     LocationListener locationListener;
     LocationCall locationCall;
     double longitude, latitude;
-    EditText etLocation;
-
+    TextInputEditText etLocation;
+    boolean flag=false;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -67,11 +69,13 @@ public class LocationFinder extends AppCompatActivity {
                 Log.d("xx", "xx");
                 configureButton();
                 String userLoc = etLocation.getText().toString();
-                if (userLoc.equals(address)) {
+                if (userLoc.equals(address) && etLocation.getText().toString().trim()!=null) {
 
+                    if(!flag)
                     showAlertDialogForSaving();
+
                 } else {
-                    showAlertDialogButtonClicked();
+                    //showAlertDialogButtonClicked();
                 }
 
             }
@@ -190,6 +194,7 @@ public class LocationFinder extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+        flag=true;
         dialog.show();
     }
 }

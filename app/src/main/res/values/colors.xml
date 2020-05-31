@@ -7,5 +7,8 @@
     <color name="colorAccent">#F44336</color>
     <color name="black">#201F1F</color>
     <color name="firstbox">#302B2B</color>
+    <color name="colorControlHighLight">#2C424D</color>
+    <color name="error_color">#FF5722</color>
+    <color name="color_control_activated">#4CAF50</color>
 
 </resources>

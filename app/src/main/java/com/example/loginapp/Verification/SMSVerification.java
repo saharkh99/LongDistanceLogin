@@ -25,6 +25,8 @@ import com.example.loginapp.Login.BaseApiService;
 import com.example.loginapp.Login.UtilsApi;
 import com.example.loginapp.MainActivity;
 import com.example.loginapp.R;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,8 +34,8 @@ import retrofit2.Response;
 
 public class SMSVerification extends AppCompatActivity {
 
-    Button verify;
-    EditText userPhone, userCode;
+    MaterialButton verify;
+    TextInputEditText userPhone, userCode;
     ProgressBar mProgressView;
     TextView tvLoad;
     BaseApiService mApiService;
@@ -132,17 +134,7 @@ public class SMSVerification extends AppCompatActivity {
             return true;
         } else {
             verify.setEnabled(false);
-            Dialog dialog = new Dialog(SMSVerification.this);
-            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            dialog.setContentView(R.layout.dialog_information);
-            TextView ok = dialog.findViewById(R.id.btn_ok);
-            ok.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    dialog.dismiss();
-                }
-            });
-            dialog.show();
+            userCode.setError("کد دریافتی را وارد کنید");
             return false;
         }
     }

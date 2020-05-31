@@ -1,21 +1,22 @@
 <resources>
     <string name="app_name">LoginApp</string>
     <string name="hint_login">لطفا اطلاعات کاربری خود را وارد کنید</string>
-    <string name="string_username">نام کاربری :</string>
+    <string name="string_username"> نام کاربری      </string>
     <string name="string_complete_username">نام کاربری خود را وارد کنید </string>
     <string name="string_complete_password">رمز عبور خود را وارد کنید </string>
 
-    <string name="string_password">رمز عبور :</string>
+    <string name="string_password">رمزعبور  </string>
     <string name="string_confirm">تایید</string>
     <string name="string_help">دریافت فایل راهنما</string>
     <string name="string_send">ارسال</string>
     <string name="name_app">سامانه ثبت حضور در زمان دورکاری</string>
-    <string name="hint_location">لطفا موقعیت مکانی خود را وراد کنید</string>
+    <string name="hint_location">لطفا موقعیت مکانی خود را وارد کنید</string>
     <string name="string_sample">مثال:شهر بندرعباس</string>
     <string name="string_load"> لطفا صبر کنید ...</string>
     <string name="string_verify">ارسال</string>
     <string name="string_code">کد دریافتی :</string>
     <string name="string_cancel">انصراف</string>
     <string name="save">اطلاعات شما ذخیره شد</string>
+    <string name="string_location">موقعیت مکانی فعلی</string>
 
 </resources>

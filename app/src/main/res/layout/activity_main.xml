@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -23,7 +24,6 @@
         android:layout_marginBottom="20dp"
         android:textStyle="bold"
         android:padding="5dp"
-        android:fontFamily="@fonts/farroya.ttf"
         android:text="@string/name_app"
         android:background="@color/firstbox"/>
 
@@ -37,101 +37,57 @@
         android:textSize="18dp"
         android:textStyle="bold"
         android:typeface="serif"
-        android:fontFamily="@fonts/farroya.ttf"
         />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="15dp"
-        android:orientation="horizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            style="@style/editStyle"
+            android:hint="نام کاربری     "
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_username"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="18dp"
+                android:ems="10"
+                android:singleLine="true"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/string_username"
-        android:padding="3dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="16dp"
-
-        />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitXY"
-            android:src="@drawable/user"/>
-        />
-    </LinearLayout>
-
-    <EditText
-        android:id="@+id/et_username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:textSize="16dp"
-        android:layout_marginLeft="18dp"
-        android:singleLine="true"
-        android:background="@drawable/edittexts"
-        android:layout_marginRight="18dp"
-        android:ems="10"
-        android:maxLength="11"
-        android:padding="10dp"
-        android:paddingRight="10dp"
-        android:fontFamily="@fonts/farroya.ttf"
-        android:hint="@string/string_complete_username"
-        />
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="15dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/string_password"
-            android:layout_margin="2dp"
-            android:padding="3dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="16dp"
-
-            />
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="2dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/lcok"/>
-        />
-    </LinearLayout>
-    <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:hint="رمز عبور      "
+            style="@style/editStyle"
+            app:endIconMode="password_toggle"
+            android:layout_height="wrap_content">
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/et_password"
         android:layout_marginRight="18dp"
         android:layout_marginLeft="18dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:padding="10dp"
+        android:textSize="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+        </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16dp"
-        android:ems="10"
-        android:singleLine="true"
-        android:background="@drawable/edittexts"
-        android:padding="10dp"
-        android:hint="@string/string_complete_password"
-        android:fontFamily="@fonts/farroya.ttf"
-
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/login"
-        android:layout_margin="18dp"
-        android:textColor="@color/whiteBlue"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="18dp"
         android:background="@drawable/button"
         android:text="@string/string_confirm"
         android:layout_gravity="center"
-        android:fontFamily="@fonts/farroya.ttf"
         />
 
     <TextView
@@ -143,7 +99,6 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@fonts/farroya.ttf"
         android:text="@string/string_help" />
 
     <ProgressBar
@@ -166,7 +121,6 @@
         android:gravity="center_horizontal"
         android:text="@string/string_load"
         android:layout_gravity="center"
-        android:fontFamily="@fonts/farroya.ttf"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         android:visibility="gone" />

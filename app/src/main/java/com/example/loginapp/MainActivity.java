@@ -1,7 +1,10 @@
 package com.example.loginapp;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.res.ResourcesCompat;
 
 import android.animation.Animator;
@@ -28,17 +31,19 @@ import android.widget.Toast;
 import com.example.loginapp.Location.LocationFinder;
 import com.example.loginapp.Login.LoginClass;
 import com.example.loginapp.Verification.SMSVerification;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button login;
+    MaterialButton login;
 
-    EditText username;
-    EditText password;
-
+    TextInputEditText username;
+    TextInputEditText password;
     View mProgressView;
     TextView tvLoad;
-
 
     String resultCode = "wrong";
 
@@ -52,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 login.setEnabled(true);
                 String uname = username.getText().toString().trim();
+                //String uname = username.getText().toString().trim();
                 String upass = password.getText().toString().trim();
 
                 if (checkNotEmpty(uname, upass)) {
@@ -64,7 +70,11 @@ public class MainActivity extends AppCompatActivity {
     private boolean checkNotEmpty(String uname, String upass) {
         if (uname.isEmpty() || upass.isEmpty()) {
             login.setEnabled(false);
-            showAlertDialogButtonClicked();
+            // showAlertDialogButtonClicked();
+            if (uname.isEmpty())
+                username.setError("نام کاربری خود را وارد کنید");
+            if (upass.isEmpty())
+                password.setError(" رمز عبور خود را وارد کنید");
             return false;
         } else {
             login.setTextColor(getResources().getColor(R.color.whiteBlueDark));
@@ -82,23 +92,23 @@ public class MainActivity extends AppCompatActivity {
         tvLoad = findViewById(R.id.tvLoad);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/farroya.ttf");
         login.setTypeface(typeface);
-
-
     }
 
-    public void showAlertDialogButtonClicked() {
+//    public void showAlertDialogButtonClicked() {
+//
+//        Dialog dialog=new Dialog(MainActivity.this);
+//        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        dialog.setContentView(R.layout.dialog_information);
+//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//        TextView ok=dialog.findViewById(R.id.btn_ok);
+//        ok.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                dialog.dismiss();
+//            }
+//        });
+//        dialog.show();
+//    }
 
-        Dialog dialog=new Dialog(MainActivity.this);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.dialog_information);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        TextView ok=dialog.findViewById(R.id.btn_ok);
-        ok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.dismiss();
-            }
-        });
-        dialog.show();
-    }
+
 }

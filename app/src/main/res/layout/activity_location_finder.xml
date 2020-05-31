@@ -53,24 +53,24 @@
             android:scaleType="fitXY"
             android:src="@drawable/location"/>
         </LinearLayout>
-    <EditText
-        android:id="@+id/et_location"
-        android:layout_marginRight="18dp"
-        android:layout_marginLeft="18dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16dp"
-        android:ems="15"
-        android:gravity="right"
-        android:inputType="textMultiLine"
-        android:lines="4"
-        android:textDirection="rtl"
-        android:background="@drawable/edittexts"
-        android:padding="10dp"
-        android:fontFamily="@fonts/farroya.ttf"
-
-        />
-
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            style="@style/editStyle"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_location"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:ems="15"
+                android:gravity="right"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:padding="10dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,13 +82,13 @@
         android:gravity="right"
         android:text="@string/string_sample"
         android:textSize="14dp"/>
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_location"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:textColor="@color/whiteBlue"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="18dp"
         android:layout_marginTop="5dp"
@@ -96,15 +96,14 @@
         android:background="@drawable/button"
         android:text="@string/string_verify"
         android:layout_gravity="center"
-        android:fontFamily="@fonts/farroya.ttf"
         />
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_cancels"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:textColor="@color/whiteBlue"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="18dp"
             android:background="@drawable/red_buttons"
