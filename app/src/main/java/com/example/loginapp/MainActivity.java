@@ -36,6 +36,8 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
+
 public class MainActivity extends AppCompatActivity {
 
     MaterialButton login;
@@ -66,7 +68,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
+    }
     private boolean checkNotEmpty(String uname, String upass) {
         if (uname.isEmpty() || upass.isEmpty()) {
             login.setEnabled(false);

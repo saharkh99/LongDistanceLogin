@@ -9,6 +9,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -38,6 +39,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class LocationFinder extends AppCompatActivity {
 
@@ -196,6 +199,10 @@ public class LocationFinder extends AppCompatActivity {
         });
         flag=true;
         dialog.show();
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }
 
